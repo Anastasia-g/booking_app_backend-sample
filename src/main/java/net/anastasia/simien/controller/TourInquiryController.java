@@ -57,7 +57,7 @@ public class TourInquiryController {
 		}
 
 		@CrossOrigin(origins = "*", allowedHeaders = "*")
-		@PostMapping("/tourInquiries")
+		@PostMapping("/bookings") //was /tourInquiries
 		//public TourInquiry createTourInquiry(@Valid @RequestBody TourInquiry tourInquiry) {
 		public TourInquiry createTourInquiry(@Valid @RequestBody TourInquiry tourInquiry) {
 			String textForTheMail="";

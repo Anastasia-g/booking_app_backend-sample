@@ -3,6 +3,7 @@ C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simi
 C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simien\model\TourInquiry.java
 C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simien\model\Guide.java
 C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simien\auth\SecurityConfiguration.java
+C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simien\model\DepositAmountToGet.java
 C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\SimienApp.java
 C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simien\model\GuideRepository.java
 C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simien\model\RequestPaymentRepository.java
@@ -17,3 +18,4 @@ C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simi
 C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simien\model\Payment.java
 C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simien\exception\ResourceNotFoundException.java
 C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simien\model\TourInquiryRepository.java
+C:\Users\Bram\eclipse-workspace1\simien-backend\src\main\java\net\anastasia\simien\model\DepositAmountImpl.java

@@ -48,7 +48,7 @@ public class PaymentController {
 	}
 	
 	@CrossOrigin(origins = "*")
-	@GetMapping("/payments/{paymentId}")
+	@GetMapping("/makepayment/{paymentId}")
 	public ResponseEntity<Payment> getPaymentById(@PathVariable(value = "paymentId") Integer paymentId)
 			throws ResourceNotFoundException {
 		
@@ -74,7 +74,7 @@ public class PaymentController {
 
 	
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
-	@PostMapping("/payments")
+	@PostMapping("/makepayment")
 	public String createPayment(@Valid @RequestBody Payment payment) {
 		//logger.debug("SAVING PAYMENT");
 		Payment pt = paymentRepository.save(payment);

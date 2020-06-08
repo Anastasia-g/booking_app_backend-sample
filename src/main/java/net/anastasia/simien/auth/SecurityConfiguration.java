@@ -16,7 +16,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http)  throws Exception {
 	    http
 	      .csrf().disable()
-	      .authorizeRequests().anyRequest().permitAll()
+	      .authorizeRequests()
+	      .antMatchers("/api/v1/makepayment/*").permitAll()
+	      .antMatchers("/api/v1/makepayment").permitAll()
+	      .antMatchers("/api/v1/getdepositamount/*").permitAll()
+	      .antMatchers("/api/v1/booking").permitAll()
+	      .antMatchers("/api/v1/bookings").permitAll()
+	      .anyRequest().authenticated()
 	      .and()
 	      .oauth2ResourceServer().jwt();
 	    http.cors();
