@@ -38,13 +38,13 @@ public class TourInquiryController {
 		private GuideRepository guideRepository;
 		
 		@CrossOrigin(origins = "*", allowedHeaders = "*")
-		@GetMapping("/tourInquiries")
+		@GetMapping("/tour-inquiries")
 		public List<TourInquiry> getAllTourInquiries() {
 			return tourInquiryRepository.findAll();
 		}
 		
 		@CrossOrigin(origins = "*")
-		@GetMapping("/tourInquiries/{tourInquiryId}")
+		@GetMapping("/tour-inquiries/{tourInquiryId}")
 		public ResponseEntity<TourInquiry> getTourInquiryById(@PathVariable(value = "tourInquiryId") Integer tourInquiryId)
 				throws ResourceNotFoundException {
 			
@@ -84,7 +84,7 @@ public class TourInquiryController {
 		}
 		
 		@CrossOrigin(origins = "*", allowedHeaders = "*")
-		@PutMapping("/tourInquiries/{tourInquiryId}")
+		@PutMapping("/tour-inquiries/{tourInquiryId}")
 		public ResponseEntity<TourInquiry> updateTourInquiry(@PathVariable(value = "tourInquiryId") Integer tourInquiryId,
 				@Valid @RequestBody TourInquiry tourInquiryDetails) throws ResourceNotFoundException {
 			TourInquiry tourInquiry = tourInquiryRepository.findById(tourInquiryId)
@@ -96,7 +96,7 @@ public class TourInquiryController {
 		}
 		
 		@CrossOrigin(origins = "*", allowedHeaders = "*")
-		@DeleteMapping("/tourInquiries/{tourInquiryId}")
+		@DeleteMapping("/tour-inquiries/{tourInquiryId}")
 		public Map<String, Boolean> deleteTourInquiry(@PathVariable(value = "tourInquiryId") Integer tourInquiryId)
 				throws ResourceNotFoundException {
 			TourInquiry tourInquiry = tourInquiryRepository.findById(tourInquiryId)

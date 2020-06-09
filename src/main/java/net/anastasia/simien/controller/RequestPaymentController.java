@@ -18,7 +18,7 @@ public class RequestPaymentController {
 	private RequestPaymentRepository requestPaymentRepository;
 	
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
-	@PostMapping("/paymentRequests")
+	@PostMapping("/payment-requests")
 	public RequestPayment createRequestPayment(@Valid @RequestBody RequestPayment requestPayment) {
 		
 		RequestPayment rp =  requestPaymentRepository.save(requestPayment);
