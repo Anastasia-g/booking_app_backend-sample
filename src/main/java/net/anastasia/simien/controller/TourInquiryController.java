@@ -89,9 +89,9 @@ public class TourInquiryController {
 				@Valid @RequestBody TourInquiry tourInquiryDetails) throws ResourceNotFoundException {
 			TourInquiry tourInquiry = tourInquiryRepository.findById(tourInquiryId)
 					.orElseThrow(() -> new ResourceNotFoundException("Tour inquiry not found for this id :: " + tourInquiryId));
-
-			tourInquiry.setName(tourInquiryDetails.getName());
-			final TourInquiry updatedTourInquiry = tourInquiryRepository.save(tourInquiry);
+			tourInquiryDetails.setId(tourInquiryId);
+			//tourInquiry.setName(tourInquiryDetails.getName());
+			final TourInquiry updatedTourInquiry = tourInquiryRepository.save(tourInquiryDetails);
 			return ResponseEntity.ok(updatedTourInquiry);
 		}
 		
