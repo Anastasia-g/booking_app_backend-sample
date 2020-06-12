@@ -26,6 +26,7 @@ import net.anastasia.simien.model.Payment;
 import net.anastasia.simien.model.PaymentRepository;
 import net.anastasia.simien.model.RequestPayment;
 import net.anastasia.simien.model.RequestPaymentRepository;
+import org.springframework.core.env.Environment;
 import net.anastasia.simien.utilities.PaypalPayment;
 
 @RestController
@@ -34,6 +35,9 @@ public class PaymentController {
 	
 
     Logger logger = LoggerFactory.getLogger(PaymentController.class);   
+    @Autowired
+    private Environment env;
+
 	 
 	@Autowired
 	private PaymentRepository paymentRepository;
@@ -81,7 +85,7 @@ public class PaymentController {
 		//return paymentRepository.save(payment);
 		logger.info("SAVING PAYMENT" + pt.getPayment());
 		
-		return PaypalPayment.pay(pt.getPayment(), "Tour deposit");
+		return PaypalPayment.pay(pt.getPayment(), "Tour deposit", env.getProperty("paypalMethod"), env.getProperty("processURL"), env.getProperty("cancelURL"));
 		//return pt;
 	}
 	

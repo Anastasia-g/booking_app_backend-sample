@@ -28,8 +28,11 @@ public class PaypalPayment {
 	static String clientSecret = "EIRm1-yHRXeALntCrMgEzvptdEJKrqe4AMRzgOhq65JMswvk9-yS6DN-baGlgAUWTWNksvLY_IC0MiiA";
     static  Logger logger = LoggerFactory.getLogger(PaypalPayment.class);   
 	static APIContext context = new APIContext(clientId, clientSecret, "sandbox");
-
-	public static String pay(double i, String paymentDescr) {
+	
+	
+	
+	public static String pay(double i, String paymentDescr, String paypalMethod, String processURL, String cancelURL) {
+		context.setMode(paypalMethod);
 		// TODO Auto-generated method stub
 		
 		
@@ -42,8 +45,8 @@ public class PaypalPayment {
 
 		// Set redirect URLs
 		RedirectUrls redirectUrls = new RedirectUrls();
-		redirectUrls.setCancelUrl("http://localhost:3000/cancel");
-		redirectUrls.setReturnUrl("http://localhost:3000/process");
+		redirectUrls.setCancelUrl(cancelURL);
+		redirectUrls.setReturnUrl(processURL);
 
 		// Set payment details
 		//Details details = new Details();
