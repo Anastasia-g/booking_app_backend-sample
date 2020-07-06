@@ -24,8 +24,8 @@ import com.paypal.api.payments.RedirectUrls;
 import com.paypal.api.payments.Transaction;
 
 public class PaypalPayment {
-	static String clientId = "AQWiW7-xc64jYmFIBngoWVHBNnAQ91z677GLOeKfIhGbaPN-Bx4ZlNi7vTGmyuNvvtQm4JJ3LuI3mJ3o";
-	static String clientSecret = "EIRm1-yHRXeALntCrMgEzvptdEJKrqe4AMRzgOhq65JMswvk9-yS6DN-baGlgAUWTWNksvLY_IC0MiiA";
+	//static String clientId = "lalala";
+	//static String clientSecret = "lalalalala";
     static  Logger logger = LoggerFactory.getLogger(PaypalPayment.class);   
 	static APIContext context = new APIContext(clientId, clientSecret, "sandbox");
 	
